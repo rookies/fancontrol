@@ -16,7 +16,7 @@ const byte minPWM = 26;
 /* Maximum PWM value: */
 const byte maxPWM = 255;
 
-/* Maximum fan PWM change per second for slow approach: */
+/* Maximum fan PWM change per interval for slow approach: */
 const byte maxPWMChange = 1;
 
 /* Minimum fan PWM difference for fast approach: */
