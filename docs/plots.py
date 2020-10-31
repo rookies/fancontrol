@@ -14,3 +14,14 @@ pyplot.title('Influence of the temperature on the fan PWM value')
 pyplot.xlabel('temperature')
 pyplot.ylabel('fan PWM value')
 pyplot.savefig('temperature_pwm.svg')
+
+fig, axs = pyplot.subplots(2, sharex=True,
+                           figsize=matplotlib.figure.figaspect(.5))
+axs[0].set_title('Slow approach of the PWM target value')
+axs[0].plot([0, 10, 10, 20, 30, 40, 40, 50], [0, 0, 10, 10, 10, 10, 100, 100])
+axs[1].plot([0, 10, 15, 20, 30, 40, 40, 50], [0, 0, 10, 10, 10, 10, 100, 100],
+            color='tab:red')
+axs[1].set_xlabel('time')
+axs[0].set_ylabel('target PWM')
+axs[1].set_ylabel('real PWM')
+pyplot.savefig('pwm_approach.svg')
